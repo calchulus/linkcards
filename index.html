@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Form - Workbench</title>
+  
+  
+ <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css'>
+
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.css" type="text/css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.css" type="text/css" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/menu.min.css" type="text/css" rel="stylesheet">
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.css" type="text/css" rel="stylesheet">
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.min.css" type="text/css" rel="stylesheet">
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/themes/basic/assets/fonts/icons.eot" type="icons" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/card.min.css" type="text/css" rel="stylesheet">
+
+    
+<link href=" https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.css" type="text/css" rel="stylesheet">
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.css" type="text/css" rel="stylesheet">
+  
+</head>
+
+<body>
+      
+	<div style="font-family: 'Quicksand', sans-serif">
+  <div class="row">
+  <form id="resourceformTip" name="resourceformTip" action="" method="post">
+  <div class="row">
+    <div class="small-6 columns">
+      <h2>Results</h2>
+      <ul class="resourceTipsList menu vertical">
+      </ul>
+    </div>
+    <div class="small-6 columns">
+           <div class="ui form">  
+    <div class="row">
+    <div class="field">
+    <label>Category</label>
+        <select multiple = "" class = "ui dropdown" name="category" id="category">
+      <option selected>-- Select Category -- </option>
+      <option value="basics">Blockchain Basics</option>
+      <option value="coins">Coins</option>
+      <option value="basics">Articles</option>
+      <option value="AL">Exchanges</option>
+      <option value="AL">Trading &amp; Strategies</option>
+        </select>
+    </div>
+       <div class="row">
+  <div class="field" >
+    <label>Link</label>
+    <textarea rows="1" name="url" id="url"></textarea>
+  </div>
+        </div>
+        <div class="row">
+  <div class="field">
+    <label>Short Text</label>
+    <textarea rows="2" name="tip" id="tip" ></textarea>
+  </div> 
+        </div>
+        
+<!--
+        
+<div class="ui basic right labeled dropdown icon button">
+  <i class="dropdown icon"></i>
+  <span class="ui tiny header">Filter</span>
+  <div class="menu">
+    <div class="ui icon search input">
+      <i class="search icon"></i>
+      <input type="text" name="Search" placeholder="Search&hellip;">
+    </div>
+    <div class="scrolling menu">
+      <div class="ui item checkbox" data-value="item1">
+        <input type="checkbox" name="item1">
+        <label>First item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item2">
+        <input type="checkbox" name="item2">
+        <label>Second item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item3">
+        <input type="checkbox" name="item3">
+        <label>Third item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item4">
+        <input type="checkbox" name="item4">
+        <label>Fourth item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item5">
+        <input type="checkbox" name="item5">
+        <label>Fifth item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item6">
+        <input type="checkbox" name="item6">
+        <label>Sixth item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item7">
+        <input type="checkbox" name="item7">
+        <label>Seventh item</label>
+      </div>
+      <div class="ui item checkbox" data-value="item8">
+        <input type="checkbox" name="item8">
+        <label>Eighth item</label>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+        
+        
+    <div class="row">
+      <input id="addValue" type="submit" class="button"/>
+    </div>
+        </div>       
+        
+        
+    </div>
+  </div>
+</div>
+      </form>
+    </div>
+    </div>
+    
+   <footer>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.js'></script>        
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/form.min.js'></script>   
+<script src='https://www.gstatic.com/firebasejs/3.6.9/firebase-app.js'></script>
+<script src='https://www.gstatic.com/firebasejs/3.6.9/firebase-auth.js'></script>
+<script src='https://www.gstatic.com/firebasejs/3.6.9/firebase-database.js'></script>
+<script src='https://www.gstatic.com/firebasejs/3.6.9/firebase-messaging.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js'></script>
+       
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.js'></script>
+       
+<script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/components/dropdown.min.js  '></script> 
+    
+
+    <script  src="js/index.js"></script>
+    </footer>
+
+
+</body>
+
+</html>
